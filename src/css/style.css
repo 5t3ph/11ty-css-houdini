@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+}
+
+h1 {
+  --houdiniExampleWidth: 200;
+  --houdiniExampleHeight: 30;
+  --houdiniExampleX: 15;
+  --houdiniExampleY: 30;
+  --houdiniExampleColor: rgb(221, 75, 216);
+
+  background: paint(houdiniExample);
+  max-width: 30ch;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: system-ui, sans-serif;
+}
