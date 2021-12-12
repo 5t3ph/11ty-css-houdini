@@ -11,13 +11,13 @@ body {
 }
 
 h1 {
-  --houdiniExampleWidth: 200;
-  --houdiniExampleHeight: 30;
-  --houdiniExampleX: 15;
-  --houdiniExampleY: 30;
-  --houdiniExampleColor: rgb(221, 75, 216);
+  --houdini-example-width: 200;
+  --houdini-example-height: 30;
+  --houdini-example-X: 15;
+  --houdini-example-Y: 30;
+  --houdini-example-color: rgb(221, 75, 216);
 
-  background: paint(houdiniExample);
+  background: paint(houdini-example);
   max-width: 30ch;
   padding: 2rem;
   font-size: 3rem;

@@ -1,26 +1,27 @@
+const WORKLET = "houdini-example";
+
 class HoudiniExample {
   static get inputProperties() {
     return [
-      "--houdiniExampleWidth",
-      "--houdiniExampleHeight",
-      "--houdiniExampleX",
-      "--houdiniExampleY",
-      "--houdiniExampleColor",
+      `--${WORKLET}-width`,
+      `--${WORKLET}-height`,
+      `--${WORKLET}-x`,
+      `--${WORKLET}-y`,
+      `--${WORKLET}-color`,
     ];
   }
 
   paint(ctx, size, properties) {
-    const width =
-      parseInt(properties.get("--houdiniExampleWidth")) || size.width;
+    const width = parseInt(properties.get(`--${WORKLET}-width`)) || size.width;
     const height =
-      parseInt(properties.get("--houdiniExampleHeight")) || size.height;
-    const x = parseInt(properties.get("--houdiniExampleX")) || 0;
-    const y = parseInt(properties.get("--houdiniExampleY")) || 0;
-    const color = String(properties.get("--houdiniExampleColor")) || "purple";
+      parseInt(properties.get(`--${WORKLET}-height`)) || size.height;
+    const x = parseInt(properties.get(`--${WORKLET}-x`)) || 0;
+    const y = parseInt(properties.get(`--${WORKLET}-y`)) || 0;
+    const color = String(properties.get(`--${WORKLET}-color`)) || "purple";
 
     ctx.fillStyle = color;
     ctx.fillRect(x, y, width, height);
   }
 }
 
-registerPaint("houdiniExample", HoudiniExample);
+registerPaint(WORKLET, HoudiniExample);
